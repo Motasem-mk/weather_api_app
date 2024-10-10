@@ -13,8 +13,8 @@ def get_weather_data():
                 'appid':request.form.get('appid'),
                 'units': request.form.get('units') }
     response = requests.get(url,params=params)
-    city =data['name']
+   
     data = response.json()
-    return f"data: {data}, city :{city}"
+    return f"data: {data}"
 if (__name__) == '__main__':
     app.run(host = '0.0.0.0' , port = 5002)
